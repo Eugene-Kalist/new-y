@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Christmas Break</title>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    font-family: "Times New Roman", serif;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center,
+        #caff00 0%,
+        #caff00 35%,
+        #dfff55 50%,
+        #ffffff 70%);
+    animation: pulse 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { filter: blur(0px) brightness(1); transform: scale(1); }
+    50% { filter: blur(6px) brightness(1.15); transform: scale(1.05); }
+    100% { filter: blur(0px) brightness(1); transform: scale(1); }
+}
+
+.text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.text h1 {
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+.snow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.snow span {
+    position: absolute;
+    top: -10px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(110vh); }
+}
+</style>
+</head>
+<body>
+<div class="background"></div>
+
+<div class="snow">
+<span style="left:0%; animation-duration:5s; animation-delay:-0s;"></span>
+<span style="left:5%; animation-duration:6s; animation-delay:-1s;"></span>
+<span style="left:10%; animation-duration:7s; animation-delay:-2s;"></span>
+<span style="left:15%; animation-duration:8s; animation-delay:-3s;"></span>
+<span style="left:20%; animation-duration:9s; animation-delay:-4s;"></span>
+<span style="left:25%; animation-duration:10s; animation-delay:-0s;"></span>
+<span style="left:30%; animation-duration:5s; animation-delay:-1s;"></span>
+<span style="left:35%; animation-duration:6s; animation-delay:-2s;"></span>
+<span style="left:40%; animation-duration:7s; animation-delay:-3s;"></span>
+<span style="left:45%; animation-duration:8s; animation-delay:-4s;"></span>
+<span style="left:50%; animation-duration:9s; animation-delay:-0s;"></span>
+<span style="left:55%; animation-duration:10s; animation-delay:-1s;"></span>
+<span style="left:60%; animation-duration:5s; animation-delay:-2s;"></span>
+<span style="left:65%; animation-duration:6s; animation-delay:-3s;"></span>
+<span style="left:70%; animation-duration:7s; animation-delay:-4s;"></span>
+<span style="left:75%; animation-duration:8s; animation-delay:-0s;"></span>
+<span style="left:80%; animation-duration:9s; animation-delay:-1s;"></span>
+<span style="left:85%; animation-duration:10s; animation-delay:-2s;"></span>
+<span style="left:90%; animation-duration:5s; animation-delay:-3s;"></span>
+<span style="left:95%; animation-duration:6s; animation-delay:-4s;"></span>
+</div>
+
+<div class="text">
+    <h1>
+        CHRISTMAS<br>
+        BREAK<br>
+        25.12–11.01
+    </h1>
+</div>
+
+</body>
+</html>
